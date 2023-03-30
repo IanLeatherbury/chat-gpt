@@ -26,7 +26,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState<string | null>("Chat");
   const [navigation, setNavigation] = useState(initialNavigation);
-  const [darkMode, setDarkMode] = useState(useDarkMode());
+  const [darkMode, setDarkMode] = useState(useDarkMode()); // useDarkMode hook
 
   // Handle navigation click
   const handleClick = (name: string) => {
