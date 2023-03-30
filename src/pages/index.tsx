@@ -3,17 +3,15 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import { ScaleIcon, ChatBubbleLeftIcon, Bars3BottomLeftIcon, MoonIcon, SunIcon } from '@heroicons/react/20/solid';
+import { ChatBubbleLeftIcon, Bars3BottomLeftIcon, MoonIcon, SunIcon } from '@heroicons/react/20/solid';
 import useDarkMode from '../hooks/useDarkMode';
 
 // Load pages with dynamic imports
-const PendulumPage = dynamic(() => import('../components/Pendulum'));
 const ChatPage = dynamic(() => import('../pages/chat'));
 
 // Initial navigation items
 const initialNavigation = [
   { name: 'Chat', href: '/chat', icon: ChatBubbleLeftIcon, current: false },
-  { name: 'Pendulum', href: '/pendulum', icon: ScaleIcon, current: false },
 ];
 
 // Utility function to concatenate class names
@@ -26,7 +24,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState<string | null>("Chat");
   const [navigation, setNavigation] = useState(initialNavigation);
-  const [darkMode, setDarkMode] = useState(useDarkMode()); // useDarkMode hook
+  const [darkMode, setDarkMode] = useState(useDarkMode());
 
   // Handle navigation click
   const handleClick = (name: string) => {
@@ -214,7 +212,6 @@ export default function Home() {
             <main className="flex-1">
               <div className="flex flex-col min-h-screen py-6">
                 <div className="flex-1 w-full px-4 mx-auto sm:px-6 lg:px-8">
-                  {selectedPage === 'Pendulum' && <PendulumPage />}
                   {selectedPage === 'Chat' && <ChatPage />}
                 </div>
               </div>
