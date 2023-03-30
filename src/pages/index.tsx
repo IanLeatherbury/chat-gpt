@@ -21,10 +21,15 @@ function classNames(...classes: string[]): string {
 
 // Home component
 export default function Home() {
+  const isDarkMode = useDarkMode();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState<string | null>("Chat");
   const [navigation, setNavigation] = useState(initialNavigation);
-  const [darkMode, setDarkMode] = useState(useDarkMode());
+  const [darkMode, setDarkMode] = useState(isDarkMode);
+
+  useEffect(() => {
+    setDarkMode(isDarkMode);
+  }, [isDarkMode]);
 
   // Handle navigation click
   const handleClick = (name: string) => {
@@ -218,6 +223,7 @@ export default function Home() {
             </main>
           </div>
         </div>
+
 
         {/* Dark mode toggle */}
         <button
