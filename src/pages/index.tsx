@@ -107,15 +107,6 @@ export default function Home() {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className="flex items-center flex-shrink-0 px-4">
-                      <Image
-                        className="rounded-full"
-                        src="https://i.imgur.com/KNKPDcW.png"
-                        alt="Ian Leatherbury"
-                        width={48}
-                        height={48}
-                      />
-                    </div>
                     <div className="flex-1 h-0 mt-5 overflow-y-auto">
                       <nav className="px-2 space-y-1">
                         {navigation.map((item) => (
@@ -155,17 +146,7 @@ export default function Home() {
           <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
             {/* Sidebar component */}
             <div className="flex flex-col flex-grow pt-5 overflow-y-auto bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-              <div className="flex items-center flex-shrink-0 px-4">
-                <Image
-                  className="rounded-full"
-                  src="https://i.imgur.com/KNKPDcW.png"
-                  alt="Ian Leatherbury"
-                  width={64}
-                  height={64}
-                />
-              </div>
-
-              <div className="flex flex-col flex-grow mt-5">
+              <div className="flex flex-col flex-grow ">
                 <nav className="flex-1 px-2 pb-4 space-y-1">
                   {navigation.map((item) => (
                     <a

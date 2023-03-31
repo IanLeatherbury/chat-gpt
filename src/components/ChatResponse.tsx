@@ -123,7 +123,7 @@ export default function ChatResponse({ message }: { message: any }) {
                         <div className="flex-shrink-0">
                             <img
                                 className="w-10 h-10 rounded-full"
-                                src={message.role === 'user' ? "https://images.unsplash.com/photo-1679321659783-8782223b0fd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" : "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"}
+                                src={message.role === 'user' ? "https://i.imgur.com/5ofvvh9.png" : "https://i.imgur.com/uMVZEsN.png"}
                                 alt=""
                             />
                         </div>
