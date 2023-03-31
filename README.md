@@ -1,9 +1,10 @@
-Just a quick and easy UI on top of ChatGPT. The bot has a funny prompt to give it a wholesome character.
+Just a quick and easy UI on top of OpenAI's Chat API. The bot has a funny prompt to give it a wholesome character. Code blocks are supported and easily copyable. UI was built with Tailwind CSS.
 
 It shows the total amount of tokens used and supports dark mode. It will inherit the system preference but also allow you to toggle to your personal preference.
 
-<img width="1438" alt="CleanShot 2023-03-30 at 19 46 22@2x" src="https://user-images.githubusercontent.com/5083430/229010135-43337773-394d-4fe8-8ae7-17785d6e7342.png">
+<img width="1434" alt="CleanShot 2023-03-30 at 19 54 12@2x" src="https://user-images.githubusercontent.com/5083430/229011179-3f1c8bac-883a-4737-bf31-21034e4910ea.png">
 
+Slap your API key in the env.local and enjoy your preferred model and a larger token count when it becomes available.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
