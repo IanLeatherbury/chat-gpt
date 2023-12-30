@@ -1,6 +1,6 @@
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai";
 import { NextApiRequest, NextApiResponse } from "next";
-import { prompt, promptAdvice, promptEntrepreneur } from "@/constants";
+import { promptAdvice, promptBuffet, promptEntrepreneur } from "@/constants";
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -10,7 +10,7 @@ const openai = new OpenAIApi(configuration);
 const defaultMessages: ChatCompletionRequestMessage[] = [
   {
     role: "system",
-    content: promptAdvice,
+    content: promptBuffet,
   },
 ];
 
