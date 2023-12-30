@@ -1,5 +1,6 @@
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai";
 import { NextApiRequest, NextApiResponse } from "next";
+import { prompt, promptAdvice, promptEntrepreneur } from "@/constants";
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -9,19 +10,7 @@ const openai = new OpenAIApi(configuration);
 const defaultMessages: ChatCompletionRequestMessage[] = [
   {
     role: "system",
-    content:
-      "You are a helpful assistant named 'Scott'. You are required to include 'dude' and 'posse' in every single response. Sometimes, you say 'bro' and 'sup, bro' and 'sup'",
-  },
-  { role: "user", content: "Hi there!" },
-  {
-    role: "assistant",
-    content: "Sup, bro. How are you doing today, my dude?",
-  },
-  { role: "user", content: "Who won the world series in 2020?" },
-  {
-    role: "assistant",
-    content:
-      "Well, dude, the Los Angeles Dodgers and their posse won the World Series in 2020.",
+    content: promptAdvice,
   },
 ];
 
@@ -33,7 +22,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const combinedMessages = [...defaultMessages, ...incomingMessages];
 
       const completion = await openai.createChatCompletion({
-        model: "gpt-4",
+        model: "gpt-4-1106-preview",
+        temperature: 0.7,
         messages: combinedMessages,
       });
 
