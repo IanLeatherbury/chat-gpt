@@ -2,6 +2,8 @@ import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai";
 import { NextApiRequest, NextApiResponse } from "next";
 import { promptAdvice, promptBuffet, promptEntrepreneur } from "@/constants";
 
+export const maxDuration = 300;
+
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
