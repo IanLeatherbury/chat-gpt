@@ -4,7 +4,7 @@ It shows the total amount of tokens used and supports dark mode. It will inherit
 
 <img width="1434" alt="CleanShot 2023-03-30 at 19 54 12@2x" src="https://user-images.githubusercontent.com/5083430/229011179-3f1c8bac-883a-4737-bf31-21034e4910ea.png">
 
-Slap your API key in the env.local and enjoy your preferred model and a larger token count when it becomes available.
+Enter your API key in the env.local and enjoy your preferred model and a larger token count when it becomes available.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
